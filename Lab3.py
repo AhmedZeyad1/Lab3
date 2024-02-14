@@ -58,3 +58,22 @@ def largestValue():
 
 # Testing Q2:
 largestValue()
+
+
+print("\n")
+print("==============================")
+print("\n")
+
+
+# Q3 - Code:
+def convertTempCToF():
+    try:
+        tempInC = float(input("Enter the tempreture in (C): "))
+        CtoF = ((9/5)*tempInC) + 32
+        print("The tempreture before in C: ",tempInC," Now in F is ",CtoF)
+    except Exception as e:
+        print("The error is ",e," or something went wrong please try again..")
+        convertTempCToF()
+
+# Testing Q3:
+convertTempCToF()                
