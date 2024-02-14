@@ -11,8 +11,8 @@ def emp_sal_program():
         
         if programEngine.lower() == "s":
             empDic = {}
-            checkValue = input("Enter [ (go) or any words to start adding] or (no) to stop: ")
 
+            checkValue = input("Enter [ (go) or any words to start adding] or (no) to stop: ")
             while checkValue.lower() != "no":
                 empKey = input("Enter employee name: ")
                 emp_keyValue = int(input("Enter employee salary: "))
@@ -81,4 +81,33 @@ def convertTempCToF():
         convertTempCToF()
 
 # Testing Q3:
-convertTempCToF()                
+convertTempCToF()
+
+
+print("\n")
+print("==============================")
+print("\n")
+
+
+# Q4 - Code:
+def multOfTheValue():
+    try:
+        value = int(input("Enter the value that you want to display it's multiplication table: "))
+        totalTable = 10
+        for i in range(1,totalTable+1):
+            print("{} * {} = {}".format(value, i, (value * i)))
+    except Exception as e:
+        print("The error is ", e, " or something went wrong please try again..")
+        multOfTheValue()
+
+# Testing Q4:
+multOfTheValue()
+
+
+
+
+
+# Q5 - Code:
+#....
+# Testing Q5:
+#.......
