@@ -1,7 +1,8 @@
 # IS424
 # Lab (3)
-
 # { Ahmed Alahmed | 439 102 481 }
+
+# Q1 - Code:
 
 def emp_sal_program():
     print("Hello User, Welcome to the emp_sal_program..")
@@ -25,10 +26,35 @@ def emp_sal_program():
         else:
             print("User, try again with the same input..")
             emp_sal_program()
-            
+
     except Exception as e:
         print("The problem is ",e," Or something went wrong, please try again..")
         emp_sal_program()
 
-# Testing P1:
+# Testing Q1:
 emp_sal_program()
+
+
+print("\n")
+print("==============================")
+print("\n")
+
+
+# Q2 - Code:
+
+def largestValue():
+    listOfValues = []
+
+    for i in range(10):
+        scanValue = float(input("User, enter index {}. value to add it to the list: ".format(i)))
+        listOfValues.append(scanValue)
+    print("The list is: ", listOfValues)
+
+    theMaxValue = listOfValues[0]
+    for x in listOfValues:
+        if x > theMaxValue:
+            theMaxValue = x
+    print("The largest value in the list is: ", theMaxValue)
+
+# Testing Q2:
+largestValue()
