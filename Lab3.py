@@ -45,16 +45,21 @@ print("\n")
 def largestValue():
     listOfValues = []
 
-    for i in range(10):
-        scanValue = float(input("User, enter index {}. value to add it to the list: ".format(i)))
-        listOfValues.append(scanValue)
-    print("The list is: ", listOfValues)
+    try:
+        for i in range(10):
+            scanValue = float(input("User, enter index {}. value to add it to the list: ".format(i)))
+            listOfValues.append(scanValue)
+        print("The list is: ", listOfValues)
 
-    theMaxValue = listOfValues[0]
-    for x in listOfValues:
-        if x > theMaxValue:
-            theMaxValue = x
-    print("The largest value in the list is: ", theMaxValue)
+        theMaxValue = listOfValues[0]
+        for x in listOfValues:
+            if x > theMaxValue:
+                theMaxValue = x
+        print("The largest value in the list is: ", theMaxValue)
+
+    except Exception as e:
+        print("The error is ",e," or something went wrong please try again..")
+        largestValue()
 
 # Testing Q2:
 largestValue()
