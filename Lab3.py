@@ -46,8 +46,9 @@ def largestValue():
     listOfValues = []
 
     try:
-        for i in range(10):
-            scanValue = float(input("User, enter index {}. value to add it to the list: ".format(i)))
+        totalOflist = 10
+        for i in range(1,totalOflist+1):
+            scanValue = float(input("User, enter {}. value to add it to the list: ".format(i)))
             listOfValues.append(scanValue)
         print("The list is: ", listOfValues)
 
@@ -104,10 +105,29 @@ def multOfTheValue():
 multOfTheValue()
 
 
-
+print("\n")
+print("==============================")
+print("\n")
 
 
 # Q5 - Code:
-#....
+
+def cssForHelloMethod(func):
+    def wrapper():
+        try:
+            valueOfRep = int(input("Enter a number of repetation: "))
+            for i in range(valueOfRep):
+                func()
+            print("Repetaion & Designing hello() function is done..")
+        except Exception as er:
+            print("The error is: ",er," try again..")
+            wrapper()    
+    return wrapper
+
+
+@cssForHelloMethod
+def hello():
+    print("hello")
+
 # Testing Q5:
-#.......
+hello()        
